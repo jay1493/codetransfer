@@ -1,0 +1,1036 @@
+2018-03-19 12:30:15.417  WARN [bootstrap,,,] [,,] 18960 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-03-19 12:30:33.926 ERROR [bootstrap,,,] [,,] 18960 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.boot.context.embedded.EmbeddedServletContainerException: Address already in use: bind
+	at com.ie.naukri.server.grizzly.server.GrizzlyEmbeddedServletContainer.start(GrizzlyEmbeddedServletContainer.java:93)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.ie.naukri.archetype.main.ApplicationConfig.main(ApplicationConfig.java:23)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bindToChannelAndAddress(TCPNIOBindingHandler.java:131)
+	at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bind(TCPNIOBindingHandler.java:88)
+	at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bind(TCPNIOBindingHandler.java:65)
+	at org.glassfish.grizzly.AbstractBindingHandler.bind(AbstractBindingHandler.java:142)
+	at org.glassfish.grizzly.AbstractBindingHandler.bind(AbstractBindingHandler.java:162)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:259)
+	at org.glassfish.grizzly.http.server.NetworkListener.start(NetworkListener.java:723)
+	at org.glassfish.grizzly.http.server.HttpServer.start(HttpServer.java:277)
+	at com.ie.naukri.server.grizzly.server.GrizzlyEmbeddedServletContainer.start(GrizzlyEmbeddedServletContainer.java:86)
+	... 10 common frames omitted
+
+2018-03-19 12:31:28.115  WARN [bootstrap,,,] [,,] 14396 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-03-19 12:34:27.670  WARN [bootstrap,,,] [,,] 15776 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-03-19 12:34:29.507  WARN [bootstrap,,,] [,,] 15776 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+2018-03-19 12:34:29.544 ERROR [bootstrap,,,] [,,] 15776 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.ie.naukri.archetype.main.ApplicationConfig.main(ApplicationConfig.java:23)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:189)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:162)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 8 common frames omitted
+
+2018-03-19 12:35:53.986  WARN [bootstrap,,,] [,,] 15400 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-03-19 12:44:48.112  WARN [bootstrap,,,] [,,] 20852 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-03-19 12:46:36.008  WARN [bootstrap,,,] [,,] 22432 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 12:42:03.234  WARN [bootstrap,,,] [,,] 18732 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 12:42:05.921  WARN [bootstrap,,,] [,,] 18732 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'messageReceiptCache': Unsatisfied dependency expressed through field 'eventsCache'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ie.naukri.cache.operations.AppAwareCacheOperations<com.ie.naukri.chatservice.chatEvents.models.MessageReceiptEvent>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.inject.Inject()}
+2018-05-31 12:42:06.490  WARN [bootstrap,,,] [,,] 18732 --- [main] o.s.boot.SpringApplication               : Error handling failed (Error creating bean with name 'check' defined in class path resource [com/ie/naukri/db/config/DBAutoConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.config.internalTransactionAdvisor' defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]: Factory method 'transactionAdvisor' threw exception; nested exception is java.lang.NullPointerException)
+2018-05-31 12:42:06.615 ERROR [bootstrap,,,] [,,] 18732 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field eventsCache in com.ie.naukri.chatservice.chatEvents.cache.MessageReceiptCache required a bean of type 'com.ie.naukri.cache.operations.AppAwareCacheOperations' that could not be found.
+	- Bean method 'getDummyCacheTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+	- Bean method 'getDummyStringCacheTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+	- Bean method 'getAppAwareAerospikeTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+	- Bean method 'getAppAwareStringAerospikeTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+	- Bean method 'getNamespaceAwareAerospikeTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'com.ie.naukri.cache.operations.AppAwareCacheOperations' in your configuration.
+
+2018-05-31 12:47:41.042  WARN [bootstrap,,,] [,,] 19040 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 12:47:43.348  WARN [bootstrap,,,] [,,] 19040 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'messageReceiptCache': Unsatisfied dependency expressed through field 'eventsCache'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ie.naukri.cache.operations.AppAwareCacheOperations<com.ie.naukri.chatservice.chatEvents.models.MessageReceiptEvent>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.inject.Inject()}
+2018-05-31 12:47:43.926  WARN [bootstrap,,,] [,,] 19040 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 12:47:43.936  WARN [bootstrap,,,] [,,] 19040 --- [main] o.s.boot.SpringApplication               : Error handling failed (Error creating bean with name 'check' defined in class path resource [com/ie/naukri/db/config/DBAutoConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.config.internalTransactionAdvisor' defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]: Factory method 'transactionAdvisor' threw exception; nested exception is java.lang.NullPointerException)
+2018-05-31 12:47:44.058 ERROR [bootstrap,,,] [,,] 19040 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field eventsCache in com.ie.naukri.chatservice.chatEvents.cache.MessageReceiptCache required a bean of type 'com.ie.naukri.cache.operations.AppAwareCacheOperations' that could not be found.
+	- Bean method 'getDummyCacheTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+	- Bean method 'getDummyStringCacheTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+	- Bean method 'getAppAwareAerospikeTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+	- Bean method 'getAppAwareStringAerospikeTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+	- Bean method 'getNamespaceAwareAerospikeTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'com.ie.naukri.cache.operations.AppAwareCacheOperations' in your configuration.
+
+2018-05-31 12:49:32.159  WARN [bootstrap,,,] [,,] 19151 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 12:49:34.690  WARN [bootstrap,,,] [,,] 19151 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'messageReceiptCache': Unsatisfied dependency expressed through field 'operations'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ie.naukri.cache.operations.AppAwareCacheOperations<com.ie.naukri.chatservice.chatEvents.models.MessageReceiptEvent>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.inject.Inject()}
+2018-05-31 12:49:35.178  WARN [bootstrap,,,] [,,] 19151 --- [main] o.s.boot.SpringApplication               : Error handling failed (Error creating bean with name 'check' defined in class path resource [com/ie/naukri/db/config/DBAutoConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.config.internalTransactionAdvisor' defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]: Factory method 'transactionAdvisor' threw exception; nested exception is java.lang.NullPointerException)
+2018-05-31 12:49:35.294 ERROR [bootstrap,,,] [,,] 19151 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field operations in com.ie.naukri.chatservice.chatEvents.cache.MessageReceiptCache required a bean of type 'com.ie.naukri.cache.operations.AppAwareCacheOperations' that could not be found.
+	- Bean method 'getDummyCacheTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+	- Bean method 'getDummyStringCacheTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+	- Bean method 'getAppAwareAerospikeTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+	- Bean method 'getAppAwareStringAerospikeTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+	- Bean method 'getNamespaceAwareAerospikeTemplate' not loaded because @ConditionalOnProperty (aerospike.cluster.nodes) did not find property 'aerospike.cluster.nodes'
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'com.ie.naukri.cache.operations.AppAwareCacheOperations' in your configuration.
+
+2018-05-31 12:52:33.058  WARN [bootstrap,,,] [,,] 19295 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 12:52:36.243  WARN [bootstrap,,,] [,,] 19295 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'messageEventsProducer': Unsatisfied dependency expressed through field 'messagingTemplateService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplateService' defined in class path resource [com/ie/naukri/messaging/config/KafkaProducerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.messaging.services.MessagingTemplateService]: Factory method 'messageTemplateService' threw exception; nested exception is org.apache.kafka.common.config.ConfigException: Invalid value 1 for configuration acks: Expected value to be a string, but it was a java.lang.Integer
+2018-05-31 12:52:37.028  WARN [bootstrap,,,] [,,] 19295 --- [main] o.s.boot.SpringApplication               : Error handling failed (Error creating bean with name 'check' defined in class path resource [com/ie/naukri/db/config/DBAutoConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.config.internalTransactionAdvisor' defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]: Factory method 'transactionAdvisor' threw exception; nested exception is java.lang.NullPointerException)
+2018-05-31 12:52:37.037 ERROR [bootstrap,,,] [,,] 19295 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'messageEventsProducer': Unsatisfied dependency expressed through field 'messagingTemplateService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplateService' defined in class path resource [com/ie/naukri/messaging/config/KafkaProducerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.messaging.services.MessagingTemplateService]: Factory method 'messageTemplateService' threw exception; nested exception is org.apache.kafka.common.config.ConfigException: Invalid value 1 for configuration acks: Expected value to be a string, but it was a java.lang.Integer
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:552)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.ie.naukri.chatservice.chatEvents.main.ApplicationConfig.main(ApplicationConfig.java:25)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplateService' defined in class path resource [com/ie/naukri/messaging/config/KafkaProducerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.messaging.services.MessagingTemplateService]: Factory method 'messageTemplateService' threw exception; nested exception is org.apache.kafka.common.config.ConfigException: Invalid value 1 for configuration acks: Expected value to be a string, but it was a java.lang.Integer
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1134)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1028)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1136)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1064)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.messaging.services.MessagingTemplateService]: Factory method 'messageTemplateService' threw exception; nested exception is org.apache.kafka.common.config.ConfigException: Invalid value 1 for configuration acks: Expected value to be a string, but it was a java.lang.Integer
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 31 common frames omitted
+Caused by: org.apache.kafka.common.config.ConfigException: Invalid value 1 for configuration acks: Expected value to be a string, but it was a java.lang.Integer
+	at org.apache.kafka.common.config.ConfigDef.parseType(ConfigDef.java:199)
+	at org.apache.kafka.common.config.ConfigDef.parse(ConfigDef.java:145)
+	at org.apache.kafka.common.config.AbstractConfig.<init>(AbstractConfig.java:49)
+	at org.apache.kafka.common.config.AbstractConfig.<init>(AbstractConfig.java:56)
+	at org.apache.kafka.clients.producer.ProducerConfig.<init>(ProducerConfig.java:317)
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:156)
+	at com.ie.naukri.messaging.config.KafkaProducerAutoConfig.messageTemplateService(KafkaProducerAutoConfig.java:102)
+	at com.ie.naukri.messaging.config.KafkaProducerAutoConfig$$EnhancerBySpringCGLIB$$135c934c.CGLIB$messageTemplateService$5(<generated>)
+	at com.ie.naukri.messaging.config.KafkaProducerAutoConfig$$EnhancerBySpringCGLIB$$135c934c$$FastClassBySpringCGLIB$$6ce78462.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.ie.naukri.messaging.config.KafkaProducerAutoConfig$$EnhancerBySpringCGLIB$$135c934c.messageTemplateService(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 32 common frames omitted
+
+2018-05-31 13:29:41.868  WARN [bootstrap,,,] [,,] 20314 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 13:29:45.416  WARN [bootstrap,,,] [,,] 20314 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webhookProcessService': Unsatisfied dependency expressed through field 'messageEventsProducer'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ie.naukri.chatservice.chatEvents.kafka_producers.MessageEventsProducer' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.inject.Inject()}
+2018-05-31 13:29:45.833  WARN [bootstrap,,,] [,,] 20314 --- [main] o.s.boot.SpringApplication               : Error handling failed (Error creating bean with name 'check' defined in class path resource [com/ie/naukri/db/config/DBAutoConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.config.internalTransactionAdvisor' defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]: Factory method 'transactionAdvisor' threw exception; nested exception is java.lang.NullPointerException)
+2018-05-31 13:29:45.974 ERROR [bootstrap,,,] [,,] 20314 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field messageEventsProducer in com.ie.naukri.chatservice.chatEvents.services.WebhookProcessService required a bean of type 'com.ie.naukri.chatservice.chatEvents.kafka_producers.MessageEventsProducer' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.ie.naukri.chatservice.chatEvents.kafka_producers.MessageEventsProducer' in your configuration.
+
+2018-05-31 13:31:30.807  WARN [bootstrap,,,] [,,] 20413 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 13:31:33.820  WARN [bootstrap,,,] [,,] 20413 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'messageEventsProducer': Unsatisfied dependency expressed through field 'messagingTemplateService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplateService' defined in class path resource [com/ie/naukri/messaging/config/KafkaProducerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.messaging.services.MessagingTemplateService]: Factory method 'messageTemplateService' threw exception; nested exception is org.apache.kafka.common.config.ConfigException: Invalid value 1 for configuration acks: Expected value to be a string, but it was a java.lang.Integer
+2018-05-31 13:31:33.848  WARN [bootstrap,,,] [,,] 20413 --- [main] o.s.boot.SpringApplication               : Error handling failed (Error creating bean with name 'check' defined in class path resource [com/ie/naukri/db/config/DBAutoConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.config.internalTransactionAdvisor' defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]: Factory method 'transactionAdvisor' threw exception; nested exception is java.lang.NullPointerException)
+2018-05-31 13:31:33.857 ERROR [bootstrap,,,] [,,] 20413 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'messageEventsProducer': Unsatisfied dependency expressed through field 'messagingTemplateService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplateService' defined in class path resource [com/ie/naukri/messaging/config/KafkaProducerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.messaging.services.MessagingTemplateService]: Factory method 'messageTemplateService' threw exception; nested exception is org.apache.kafka.common.config.ConfigException: Invalid value 1 for configuration acks: Expected value to be a string, but it was a java.lang.Integer
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:552)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.ie.naukri.chatservice.chatEvents.main.ApplicationConfig.main(ApplicationConfig.java:25)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplateService' defined in class path resource [com/ie/naukri/messaging/config/KafkaProducerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.messaging.services.MessagingTemplateService]: Factory method 'messageTemplateService' threw exception; nested exception is org.apache.kafka.common.config.ConfigException: Invalid value 1 for configuration acks: Expected value to be a string, but it was a java.lang.Integer
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1134)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1028)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1136)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1064)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.messaging.services.MessagingTemplateService]: Factory method 'messageTemplateService' threw exception; nested exception is org.apache.kafka.common.config.ConfigException: Invalid value 1 for configuration acks: Expected value to be a string, but it was a java.lang.Integer
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 31 common frames omitted
+Caused by: org.apache.kafka.common.config.ConfigException: Invalid value 1 for configuration acks: Expected value to be a string, but it was a java.lang.Integer
+	at org.apache.kafka.common.config.ConfigDef.parseType(ConfigDef.java:199)
+	at org.apache.kafka.common.config.ConfigDef.parse(ConfigDef.java:145)
+	at org.apache.kafka.common.config.AbstractConfig.<init>(AbstractConfig.java:49)
+	at org.apache.kafka.common.config.AbstractConfig.<init>(AbstractConfig.java:56)
+	at org.apache.kafka.clients.producer.ProducerConfig.<init>(ProducerConfig.java:317)
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:156)
+	at com.ie.naukri.messaging.config.KafkaProducerAutoConfig.messageTemplateService(KafkaProducerAutoConfig.java:102)
+	at com.ie.naukri.messaging.config.KafkaProducerAutoConfig$$EnhancerBySpringCGLIB$$135c934c.CGLIB$messageTemplateService$5(<generated>)
+	at com.ie.naukri.messaging.config.KafkaProducerAutoConfig$$EnhancerBySpringCGLIB$$135c934c$$FastClassBySpringCGLIB$$6ce78462.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.ie.naukri.messaging.config.KafkaProducerAutoConfig$$EnhancerBySpringCGLIB$$135c934c.messageTemplateService(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 32 common frames omitted
+
+2018-05-31 14:12:01.636  WARN [bootstrap,,,] [,,] 22861 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:12:06.265  WARN [bootstrap,,,] [,,] 22861 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'check' defined in class path resource [com/ie/naukri/db/config/DBAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.context.ApplicationListener]: Factory method 'check' threw exception; nested exception is java.lang.IllegalStateException: You have included mysql-spring-boot-starter but none of replica mode(db.masters.*/db.slaves.*) or shard mode(db.shard.*) configurations are used.
+2018-05-31 14:12:06.688  WARN [bootstrap,,,] [,,] 22861 --- [main] o.s.boot.SpringApplication               : Error handling failed (Error creating bean with name 'check' defined in class path resource [com/ie/naukri/db/config/DBAutoConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.config.internalTransactionAdvisor' defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]: Factory method 'transactionAdvisor' threw exception; nested exception is java.lang.NullPointerException)
+2018-05-31 14:12:06.704 ERROR [bootstrap,,,] [,,] 22861 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'check' defined in class path resource [com/ie/naukri/db/config/DBAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.context.ApplicationListener]: Factory method 'check' threw exception; nested exception is java.lang.IllegalStateException: You have included mysql-spring-boot-starter but none of replica mode(db.masters.*/db.slaves.*) or shard mode(db.shard.*) configurations are used.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1134)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1028)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.ie.naukri.chatservice.chatEvents.main.ApplicationConfig.main(ApplicationConfig.java:25)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.context.ApplicationListener]: Factory method 'check' threw exception; nested exception is java.lang.IllegalStateException: You have included mysql-spring-boot-starter but none of replica mode(db.masters.*/db.slaves.*) or shard mode(db.shard.*) configurations are used.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 18 common frames omitted
+Caused by: java.lang.IllegalStateException: You have included mysql-spring-boot-starter but none of replica mode(db.masters.*/db.slaves.*) or shard mode(db.shard.*) configurations are used.
+	at com.ie.naukri.db.config.DBAutoConfig.checkDbConfiguration(DBAutoConfig.java:57)
+	at com.ie.naukri.db.config.DBAutoConfig.check(DBAutoConfig.java:41)
+	at com.ie.naukri.db.config.DBAutoConfig$$EnhancerBySpringCGLIB$$30b1e090.CGLIB$check$1(<generated>)
+	at com.ie.naukri.db.config.DBAutoConfig$$EnhancerBySpringCGLIB$$30b1e090$$FastClassBySpringCGLIB$$54485e53.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.ie.naukri.db.config.DBAutoConfig$$EnhancerBySpringCGLIB$$30b1e090.check(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 19 common frames omitted
+
+2018-05-31 14:12:49.102  WARN [bootstrap,,,] [,,] 22929 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:12:54.424  WARN [bootstrap,,,] [,,] 22929 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'check' defined in class path resource [com/ie/naukri/db/config/DBAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.context.ApplicationListener]: Factory method 'check' threw exception; nested exception is java.lang.IllegalStateException: You have included mysql-spring-boot-starter but none of replica mode(db.masters.*/db.slaves.*) or shard mode(db.shard.*) configurations are used.
+2018-05-31 14:12:55.181  WARN [bootstrap,,,] [,,] 22929 --- [main] o.s.boot.SpringApplication               : Error handling failed (Error creating bean with name 'check' defined in class path resource [com/ie/naukri/db/config/DBAutoConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.config.internalTransactionAdvisor' defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]: Factory method 'transactionAdvisor' threw exception; nested exception is java.lang.NullPointerException)
+2018-05-31 14:12:55.202 ERROR [bootstrap,,,] [,,] 22929 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'check' defined in class path resource [com/ie/naukri/db/config/DBAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.context.ApplicationListener]: Factory method 'check' threw exception; nested exception is java.lang.IllegalStateException: You have included mysql-spring-boot-starter but none of replica mode(db.masters.*/db.slaves.*) or shard mode(db.shard.*) configurations are used.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1134)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1028)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.ie.naukri.chatservice.chatEvents.main.ApplicationConfig.main(ApplicationConfig.java:25)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.context.ApplicationListener]: Factory method 'check' threw exception; nested exception is java.lang.IllegalStateException: You have included mysql-spring-boot-starter but none of replica mode(db.masters.*/db.slaves.*) or shard mode(db.shard.*) configurations are used.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 18 common frames omitted
+Caused by: java.lang.IllegalStateException: You have included mysql-spring-boot-starter but none of replica mode(db.masters.*/db.slaves.*) or shard mode(db.shard.*) configurations are used.
+	at com.ie.naukri.db.config.DBAutoConfig.checkDbConfiguration(DBAutoConfig.java:57)
+	at com.ie.naukri.db.config.DBAutoConfig.check(DBAutoConfig.java:41)
+	at com.ie.naukri.db.config.DBAutoConfig$$EnhancerBySpringCGLIB$$3e49d1.CGLIB$check$1(<generated>)
+	at com.ie.naukri.db.config.DBAutoConfig$$EnhancerBySpringCGLIB$$3e49d1$$FastClassBySpringCGLIB$$8e8308c9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.ie.naukri.db.config.DBAutoConfig$$EnhancerBySpringCGLIB$$3e49d1.check(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 19 common frames omitted
+
+2018-05-31 14:13:56.492  WARN [bootstrap,,,] [,,] 23048 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:14:04.813  WARN [bootstrap,,,] [,,] 23098 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:14:07.729  WARN [bootstrap,,,] [,,] 23098 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:14:08.730  WARN [bootstrap,,,] [,,] 23098 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:14:12.732  WARN [bootstrap,,,] [,,] 23098 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 6 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:16:30.141 ERROR [bootstrap,f61fae2a0bf85ee9,f61fae2a0bf85ee9,false] [,,] 23098 --- [Grizzly-worker(1)] c.i.n.c.m.ApplicationExceptionMapper     : ErrorResponse [message=Invalid layer webhook request, statusCode=400, validationErrors=[]]
+2018-05-31 14:16:30.371 ERROR [bootstrap,1f89ea61efa312f0,1f89ea61efa312f0,false] [,,] 23098 --- [Grizzly-worker(2)] c.i.n.c.m.ApplicationExceptionMapper     : ErrorResponse [message=Invalid layer webhook request, statusCode=400, validationErrors=[]]
+2018-05-31 14:19:38.462  WARN [bootstrap,,,] [,,] 23656 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:19:42.471  WARN [bootstrap,,,] [,,] 23656 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:19:44.473  WARN [bootstrap,,,] [,,] 23656 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:19:47.474  WARN [bootstrap,,,] [,,] 23656 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 5 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:22:54.992 ERROR [bootstrap,,,] [,,] 23656 --- [main_task_executor_thread4] .c.c.m.ApplicationThreadExceptionHandler : processMessageCreateEvent , reported error : No producer template found with node name: msg_sent_node
+2018-05-31 14:24:44.548  WARN [bootstrap,,,] [,,] 23656 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 2 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:34:54.751  WARN [bootstrap,,,] [,,] 24795 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:34:57.494  WARN [bootstrap,,,] [,,] 24795 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'messageReceiptCache': Unsatisfied dependency expressed through field 'operations'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getAppAwareAerospikeTemplate' defined in class path resource [com/ie/naukri/aerospike/config/AerospikeAppConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.cache.operations.AppAwareCacheOperations]: Factory method 'getAppAwareAerospikeTemplate' threw exception; nested exception is com.aerospike.client.AerospikeException$Connection: Error Code 11: Failed to connect to host(s): 
+192.168.2.116 3000 Error Code 11: java.net.SocketTimeoutException: connect timed out
+
+2018-05-31 14:34:57.791 ERROR [bootstrap,,,] [,,] 24795 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'messageReceiptCache': Unsatisfied dependency expressed through field 'operations'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getAppAwareAerospikeTemplate' defined in class path resource [com/ie/naukri/aerospike/config/AerospikeAppConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.cache.operations.AppAwareCacheOperations]: Factory method 'getAppAwareAerospikeTemplate' threw exception; nested exception is com.aerospike.client.AerospikeException$Connection: Error Code 11: Failed to connect to host(s): 
+192.168.2.116 3000 Error Code 11: java.net.SocketTimeoutException: connect timed out
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:552)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.ie.naukri.chatservice.chatEvents.main.ApplicationConfig.main(ApplicationConfig.java:25)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getAppAwareAerospikeTemplate' defined in class path resource [com/ie/naukri/aerospike/config/AerospikeAppConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.cache.operations.AppAwareCacheOperations]: Factory method 'getAppAwareAerospikeTemplate' threw exception; nested exception is com.aerospike.client.AerospikeException$Connection: Error Code 11: Failed to connect to host(s): 
+192.168.2.116 3000 Error Code 11: java.net.SocketTimeoutException: connect timed out
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1134)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1028)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1136)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1064)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.cache.operations.AppAwareCacheOperations]: Factory method 'getAppAwareAerospikeTemplate' threw exception; nested exception is com.aerospike.client.AerospikeException$Connection: Error Code 11: Failed to connect to host(s): 
+192.168.2.116 3000 Error Code 11: java.net.SocketTimeoutException: connect timed out
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 31 common frames omitted
+Caused by: com.aerospike.client.AerospikeException$Connection: Error Code 11: Failed to connect to host(s): 
+192.168.2.116 3000 Error Code 11: java.net.SocketTimeoutException: connect timed out
+
+	at com.aerospike.client.cluster.Cluster.seedNodes(Cluster.java:443)
+	at com.aerospike.client.cluster.Cluster.tend(Cluster.java:336)
+	at com.aerospike.client.cluster.Cluster.waitTillStabilized(Cluster.java:301)
+	at com.aerospike.client.cluster.Cluster.initTendThread(Cluster.java:211)
+	at com.aerospike.client.AerospikeClient.<init>(AerospikeClient.java:233)
+	at com.ie.naukri.aerospike.config.AerospikeAppConfig.getAerospikeClient(AerospikeAppConfig.java:91)
+	at com.ie.naukri.aerospike.config.AerospikeAppConfig.getAppAwareAerospikeTemplate(AerospikeAppConfig.java:134)
+	at com.ie.naukri.aerospike.config.AerospikeAppConfig$$EnhancerBySpringCGLIB$$6de84420.CGLIB$getAppAwareAerospikeTemplate$8(<generated>)
+	at com.ie.naukri.aerospike.config.AerospikeAppConfig$$EnhancerBySpringCGLIB$$6de84420$$FastClassBySpringCGLIB$$d9811c80.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.ie.naukri.aerospike.config.AerospikeAppConfig$$EnhancerBySpringCGLIB$$6de84420.getAppAwareAerospikeTemplate(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 32 common frames omitted
+
+2018-05-31 14:35:52.746  WARN [bootstrap,,,] [,,] 24863 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:36:00.828  WARN [bootstrap,,,] [,,] 24863 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 5 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:38:28.487  WARN [bootstrap,,,] [,,] 25082 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:38:36.848  WARN [bootstrap,,,] [,,] 25082 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 5 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:39:17.109  WARN [bootstrap,,,] [,,] 25197 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:39:23.463  WARN [bootstrap,,,] [,,] 25197 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getNamespaceAwareAerospikeTemplate' defined in class path resource [com/ie/naukri/aerospike/config/AerospikeAppConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.cache.operations.NamespaceAwareCacheTemplate]: Factory method 'getNamespaceAwareAerospikeTemplate' threw exception; nested exception is com.aerospike.client.AerospikeException$Connection: Error Code 11: Failed to connect to host(s): 
+192.168.2.116 3000 Error Code 11: java.net.SocketTimeoutException: connect timed out
+
+2018-05-31 14:39:24.280 ERROR [bootstrap,,,] [,,] 25197 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getNamespaceAwareAerospikeTemplate' defined in class path resource [com/ie/naukri/aerospike/config/AerospikeAppConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.cache.operations.NamespaceAwareCacheTemplate]: Factory method 'getNamespaceAwareAerospikeTemplate' threw exception; nested exception is com.aerospike.client.AerospikeException$Connection: Error Code 11: Failed to connect to host(s): 
+192.168.2.116 3000 Error Code 11: java.net.SocketTimeoutException: connect timed out
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1134)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1028)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.ie.naukri.chatservice.chatEvents.main.ApplicationConfig.main(ApplicationConfig.java:25)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ie.naukri.cache.operations.NamespaceAwareCacheTemplate]: Factory method 'getNamespaceAwareAerospikeTemplate' threw exception; nested exception is com.aerospike.client.AerospikeException$Connection: Error Code 11: Failed to connect to host(s): 
+192.168.2.116 3000 Error Code 11: java.net.SocketTimeoutException: connect timed out
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 18 common frames omitted
+Caused by: com.aerospike.client.AerospikeException$Connection: Error Code 11: Failed to connect to host(s): 
+192.168.2.116 3000 Error Code 11: java.net.SocketTimeoutException: connect timed out
+
+	at com.aerospike.client.cluster.Cluster.seedNodes(Cluster.java:443)
+	at com.aerospike.client.cluster.Cluster.tend(Cluster.java:336)
+	at com.aerospike.client.cluster.Cluster.waitTillStabilized(Cluster.java:301)
+	at com.aerospike.client.cluster.Cluster.initTendThread(Cluster.java:211)
+	at com.aerospike.client.AerospikeClient.<init>(AerospikeClient.java:233)
+	at com.ie.naukri.aerospike.config.AerospikeAppConfig.getAerospikeClient(AerospikeAppConfig.java:91)
+	at com.ie.naukri.aerospike.config.AerospikeAppConfig.getNamespaceAwareAerospikeTemplate(AerospikeAppConfig.java:176)
+	at com.ie.naukri.aerospike.config.AerospikeAppConfig$$EnhancerBySpringCGLIB$$9074f1cb.CGLIB$getNamespaceAwareAerospikeTemplate$8(<generated>)
+	at com.ie.naukri.aerospike.config.AerospikeAppConfig$$EnhancerBySpringCGLIB$$9074f1cb$$FastClassBySpringCGLIB$$3c004bf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.ie.naukri.aerospike.config.AerospikeAppConfig$$EnhancerBySpringCGLIB$$9074f1cb.getNamespaceAwareAerospikeTemplate(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 19 common frames omitted
+
+2018-05-31 14:40:27.344  WARN [bootstrap,,,] [,,] 25292 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:40:35.315  WARN [bootstrap,,,] [,,] 25292 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 5 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:40:48.319  WARN [bootstrap,,,] [,,] 25292 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 2 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:42:09.212  WARN [bootstrap,,,] [,,] 25582 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:42:17.456  WARN [bootstrap,,,] [,,] 25582 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 5 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:48:00.546  WARN [bootstrap,,,] [,,] 25582 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 2 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:52:14.036  WARN [bootstrap,,,] [,,] 26419 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:52:22.153  WARN [bootstrap,,,] [,,] 26419 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 5 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 14:58:15.133  WARN [bootstrap,,,] [,,] 26837 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 14:58:21.107  WARN [bootstrap,,,] [,,] 26837 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 5 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 15:03:00.177  WARN [bootstrap,,,] [,,] 26837 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 2 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 15:04:20.031  WARN [bootstrap,,,] [,,] 28709 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-31 15:04:28.051  WARN [bootstrap,,,] [,,] 28709 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 5 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-31 15:09:30.381  WARN [bootstrap,,,] [,,] 28709 --- [AsyncReporter(URLConnectionSender{encoding=THRIFT, messageMaxBytes=5242880, encoder=THRIFT, endpoint=http://localhost:9411/api/v1/spans, connectTimeout=10000, readTimeout=60000, compressionEnabled=false, mediaType=application/x-thrift})] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 2 spans due to ConnectException(Connection refused (Connection refused))
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1334)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1309)
+	at zipkin.reporter.urlconnection.URLConnectionSender.send(URLConnectionSender.java:174)
+	at zipkin.reporter.urlconnection.URLConnectionSender.sendSpans(URLConnectionSender.java:135)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+

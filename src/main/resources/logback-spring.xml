@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+	<!-- Get Application name and server port from properties file (Environment) -->
+	<springProperty scope="context" name="appName"
+		source="spring.application.name" />
+	<springProperty scope="context" name="appPort" source="server.port" />
+	<springProperty scope="context" name="serverName" source="HOSTNAME" />
+
+	<!-- Define logging pattern for console and files -->
+	<property name="CONSOLE_LOG_PATTERN"
+		value="${CONSOLE_LOG_PATTERN:-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) [%X{systemId},%X{appId},%X{requestId}] %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}" />
+	<property name="FILE_LOG_PATTERN"
+		value="%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} [%X{systemId},%X{appId},%X{requestId}] ${PID:- } --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}" />
+	<!-- ::=is used to distinguish key and value while ||| is used as token separator -->
+	<property name="KAFKA_LOG_PATTERN"
+		value="logtime::=%d{yyyy-MM-dd HH:mm:ss.SSS}|||appCode::=${appName}|||server::=${serverName:-${HOSTNAME}}|||instanceIdentifier::=${instance.identifier:-${appPort}}|||level::=%p|||systemId::=%X{systemId}|||appId::=%X{appId:-0}|||transactionId::=%X{requestId}|||pid::=${PID:-}|||thread::=%t|||className::=%logger|||message::=%m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}" />
+
+	<!-- Define file names using app name and port that we have fetched from 
+		properties file. File names also utilize log.path system property to work 
+		out location pf log files -->
+	<property name="ACCESS_LOG_FILE"
+		value="${log.path:-logs}/${request.log.file:-${appName}-${appPort}-access.log}"></property>
+	<property name="INFO_LOG_FILE"
+		value="${log.path:-logs}/${info.log.file:-${appName}-${appPort}-info.log}"></property>
+	<property name="ERROR_LOG_FILE"
+		value="${log.path:-logs}/${error.log.file:-${appName}-${appPort}-error.log}"></property>
+
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>TRACE</level>
+		</filter>
+	</appender>
+	
+	<appender name="accessAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>${FILE_LOG_PATTERN}</pattern>
+		</encoder>
+		<File>${ACCESS_LOG_FILE}</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<FileNamePattern>${ACCESS_LOG_FILE}.%i</FileNamePattern>
+			<!-- keep 3 files of 100 MB each -->
+			<minIndex>1</minIndex>
+			<maxIndex>2</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>100MB</maxFileSize>
+		</triggeringPolicy>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>TRACE</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<appender name="infoAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>${FILE_LOG_PATTERN}</pattern>
+		</encoder>
+		<File>${INFO_LOG_FILE}</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<FileNamePattern>${INFO_LOG_FILE}.%i</FileNamePattern>
+			<!-- keep 3 files of 100 MB each -->
+			<minIndex>1</minIndex>
+			<maxIndex>2</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>100MB</maxFileSize>
+		</triggeringPolicy>
+		<filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+			<evaluator> <!-- defaults to type ch.qos.logback.classic.boolex.JaninoEventEvaluator -->
+				<expression>return level &lt;= INFO;</expression>
+			</evaluator>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<appender name="errorAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>${FILE_LOG_PATTERN}</pattern>
+		</encoder>
+		<File>${ERROR_LOG_FILE}</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<!-- daily rollover -->
+			<FileNamePattern>${ERROR_LOG_FILE}.%i</FileNamePattern>
+			<!-- keep 7 files of 100 mb each -->
+			<minIndex>1</minIndex>
+			<maxIndex>6</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>100MB</maxFileSize>
+		</triggeringPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+	</appender>
+
+	<!-- This is the kafkaAppender -->
+	<appender name="kafkaAppender"
+		class="com.github.danielwegener.logback.kafka.KafkaAppender">
+		<!-- This is the default encoder that encodes every log message to an utf8-encoded 
+			string -->
+		<encoder
+			class="com.github.danielwegener.logback.kafka.encoding.LayoutKafkaMessageEncoder">
+			<layout class="ch.qos.logback.classic.PatternLayout">
+				<pattern>${KAFKA_LOG_PATTERN}
+				</pattern>
+			</layout>
+		</encoder>
+		<topic>central-services-logs</topic>
+		<keyingStrategy
+			class="com.github.danielwegener.logback.kafka.keying.RoundRobinKeyingStrategy" />
+		<deliveryStrategy
+			class="com.github.danielwegener.logback.kafka.delivery.AsynchronousDeliveryStrategy" />
+
+		<!-- each <producerConfig> translates to regular kafka-client config (format: 
+			key=value) -->
+		<!-- producer configs are documented here: https://kafka.apache.org/documentation.html#newproducerconfigs -->
+		<!-- bootstrap.servers is the only mandatory producerConfig -->
+		<producerConfig>bootstrap.servers=kafka.logs.resdex.com:10092</producerConfig>
+		<!-- wait for leader broker to ack the reception of a batch.  -->
+        <producerConfig>acks=1</producerConfig>
+        <!-- wait up to 1000ms and collect log messages before sending them as a batch -->
+        <producerConfig>linger.ms=1000</producerConfig>
+        <producerConfig>batch.size=10</producerConfig>
+        <!-- define a client-id that you use to identify yourself against the kafka broker -->
+        <producerConfig>client.id=${serverName:-${HOSTNAME}}-${CONTEXT_NAME}-logback-appender</producerConfig>
+        
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+		
+		<!-- this is the fallback appender if kafka is not available. -->
+		<appender-ref ref="errorAppender" />
+		<appender-ref ref="infoAppender" />
+	</appender>
+
+	<logger name="org" level="WARN" />
+	<logger name="org.apache.kafka" level="ERROR" />
+	<logger name="com.netflix" level="WARN" />
+	
+	<!-- Logger for tracing successful calls to application -->
+	<logger name="accessLogger" level="TRACE" additivity="false">
+		<appender-ref ref="accessAppender" />
+	</logger>
+
+	<root level="${log.root.level:-INFO}">
+		<if condition='property("spring.profiles.active").equalsIgnoreCase("prod") || property("centralized.logs.enabled").equalsIgnoreCase("true")'>
+	        <then>
+	            <appender-ref ref="kafkaAppender" />
+	        </then>
+	        <else>
+				<appender-ref ref="errorAppender" />
+				<appender-ref ref="consoleAppender" />
+	        </else>
+	    </if>
+	    <appender-ref ref="infoAppender" />
+	</root>
+</configuration>

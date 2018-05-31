@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.ie.naukri.chatservice</groupId>
+	<artifactId>chatEvents</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>chatEvents</name>
+	<description>Maven Archetype Project containing Spring Cloud, Jersey and Grizzly</description>
+
+	<parent>
+		<groupId>com.ie.naukri.msa.concerns</groupId>
+		<artifactId>msa-bom</artifactId>
+		<version>0.1.1-SNAPSHOT</version> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<!-- Defined following properties with default values in order to override these for Kubernetes deployment  -->
+		<finalName>${project.artifactId}-${project.version}</finalName>
+		<buildDirectory>${project.basedir}/target</buildDirectory>
+
+		<!-- Additional Library versions should be mentioned here -->
+		<messaging.starter.version>1.2.1</messaging.starter.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jersey</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ie.naukri.msa.concerns</groupId>
+			<artifactId>grizzly-spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ie.naukri.msa.concerns</groupId>
+			<artifactId>tracing-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ie.naukri.msa.concerns</groupId>
+			<artifactId>jersey2-patch-extension</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ie.naukri.msa.concerns</groupId>
+			<artifactId>exception-framework</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ie.naukri.msa.concerns</groupId>
+			<artifactId>rest-service-client-utils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ie.naukri.msa.concerns</groupId>
+			<artifactId>aerospike-spring-boot-starter</artifactId>
+			<version>0.1.2</version>
+		</dependency>
+		<!-- Centralized Logging -->
+		<dependency>
+			<groupId>com.github.danielwegener</groupId>
+			<artifactId>logback-kafka-appender</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.janino</groupId>
+			<artifactId>janino</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.ie.naukri.msa.concerns</groupId>
+			<artifactId>test-utils</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>com.ie.naukri.msa.concerns</groupId>
+		    <artifactId>messaging-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>libs-release</name>
+			<url>http://mavenrepo.infoedge.com/artifactory/libs-release</url>
+		</repository>
+		<repository>
+			<snapshots />
+			<id>snapshots</id>
+			<name>libs-snapshot</name>
+			<url>http://mavenrepo.infoedge.com/artifactory/libs-snapshot</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<finalName>${finalName}</finalName>
+		<directory>${buildDirectory}</directory>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

@@ -1,0 +1,46 @@
+2018-03-19 12:30:13.287  INFO [bootstrap,,,] [,,] 18960 --- [main] c.i.n.archetype.main.ApplicationConfig   : The following profiles are active: dev
+2018-03-19 12:31:25.622  INFO [bootstrap,,,] [,,] 14396 --- [main] c.i.n.archetype.main.ApplicationConfig   : The following profiles are active: dev
+2018-03-19 12:31:47.192  INFO [bootstrap,,,] [,,] 14396 --- [main] c.i.n.archetype.main.ApplicationConfig   : Started ApplicationConfig in 30.116 seconds (JVM running for 31.792)
+2018-03-19 12:34:22.773  INFO [bootstrap,,,] [,,] 15776 --- [main] c.i.n.archetype.main.ApplicationConfig   : The following profiles are active: dev
+2018-03-19 12:35:51.821  INFO [bootstrap,,,] [,,] 15400 --- [main] c.i.n.archetype.main.ApplicationConfig   : The following profiles are active: dev
+2018-03-19 12:36:09.509  INFO [bootstrap,,,] [,,] 15400 --- [main] c.i.n.archetype.main.ApplicationConfig   : Started ApplicationConfig in 25.635 seconds (JVM running for 27.044)
+2018-03-19 12:44:45.881  INFO [bootstrap,,,] [,,] 20852 --- [main] c.i.n.archetype.main.ApplicationConfig   : The following profiles are active: dev
+2018-03-19 12:45:05.122  INFO [bootstrap,,,] [,,] 20852 --- [main] c.i.n.archetype.main.ApplicationConfig   : Started ApplicationConfig in 27.36 seconds (JVM running for 29.362)
+2018-03-19 12:45:12.701  INFO [bootstrap,882ecad02b055253,882ecad02b055253,false] [test,123,-1] 20852 --- [Grizzly-worker(1)] c.i.n.archetype.resources.TestResource   : Message: 123
+2018-03-19 12:46:33.334  INFO [bootstrap,,,] [,,] 22432 --- [main] c.i.n.archetype.main.ApplicationConfig   : The following profiles are active: dev
+2018-03-19 12:46:53.287  INFO [bootstrap,,,] [,,] 22432 --- [main] c.i.n.archetype.main.ApplicationConfig   : Started ApplicationConfig in 28.856 seconds (JVM running for 30.318)
+2018-03-19 12:47:00.041 DEBUG [bootstrap,,,] [,,] 22432 --- [QuartzScheduler_Worker-1] com.ie.naukri.utils.DNSResolverService   : Checking for DNS changes
+2018-03-19 12:47:00.057 DEBUG [bootstrap,efd137f9c5bd040d,3c702ec78f469c90,false] [,,] 22432 --- [pool-3-thread-1] c.i.n.r.c.l.ClientSideLoadBalancer       : Resetting failure IPs
+2018-03-19 12:47:24.705 DEBUG [bootstrap,f60c8d1de9201088,f60c8d1de9201088,false] [test,123,-1] 22432 --- [Grizzly-worker(1)] c.i.n.archetype.resources.TestResource   : Message: 123
+2018-03-19 12:47:24.705  INFO [bootstrap,f60c8d1de9201088,f60c8d1de9201088,false] [test,123,-1] 22432 --- [Grizzly-worker(1)] c.i.n.archetype.resources.TestResource   : Message: 123
+2018-03-19 12:47:30.003 DEBUG [bootstrap,,,] [,,] 22432 --- [QuartzScheduler_Worker-1] com.ie.naukri.utils.DNSResolverService   : Checking for DNS changes
+2018-03-19 12:47:30.004 DEBUG [bootstrap,ff5c93ffabc176a7,e11ad048dfacfa9e,false] [,,] 22432 --- [pool-3-thread-1] c.i.n.r.c.l.ClientSideLoadBalancer       : Resetting failure IPs
+2018-05-31 12:42:01.732  INFO [bootstrap,,,] [,,] 18732 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 12:47:40.340  INFO [bootstrap,,,] [,,] 19040 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 12:49:31.265  INFO [bootstrap,,,] [,,] 19151 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 12:52:32.170  INFO [bootstrap,,,] [,,] 19295 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 13:29:41.096  INFO [bootstrap,,,] [,,] 20314 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 13:31:30.040  INFO [bootstrap,,,] [,,] 20413 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:12:00.759  INFO [bootstrap,,,] [,,] 22861 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:12:48.286  INFO [bootstrap,,,] [,,] 22929 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:13:55.345  INFO [bootstrap,,,] [,,] 23048 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:14:04.129  INFO [bootstrap,,,] [,,] 23098 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:14:13.110  INFO [bootstrap,,,] [,,] 23098 --- [main] c.i.n.c.c.main.ApplicationConfig         : Started ApplicationConfig in 9.967 seconds (JVM running for 10.441)
+2018-05-31 14:19:37.698  INFO [bootstrap,,,] [,,] 23656 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:19:48.337  INFO [bootstrap,,,] [,,] 23656 --- [main] c.i.n.c.c.main.ApplicationConfig         : Started ApplicationConfig in 11.625 seconds (JVM running for 12.631)
+2018-05-31 14:34:53.961  INFO [bootstrap,,,] [,,] 24795 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:35:52.008  INFO [bootstrap,,,] [,,] 24863 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:36:01.375  INFO [bootstrap,,,] [,,] 24863 --- [main] c.i.n.c.c.main.ApplicationConfig         : Started ApplicationConfig in 10.382 seconds (JVM running for 10.929)
+2018-05-31 14:38:27.574  INFO [bootstrap,,,] [,,] 25082 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:38:37.484  INFO [bootstrap,,,] [,,] 25082 --- [main] c.i.n.c.c.main.ApplicationConfig         : Started ApplicationConfig in 11.06 seconds (JVM running for 11.643)
+2018-05-31 14:39:16.264  INFO [bootstrap,,,] [,,] 25197 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:40:26.549  INFO [bootstrap,,,] [,,] 25292 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:40:35.493  INFO [bootstrap,,,] [,,] 25292 --- [main] c.i.n.c.c.main.ApplicationConfig         : Started ApplicationConfig in 9.791 seconds (JVM running for 10.213)
+2018-05-31 14:42:08.365  INFO [bootstrap,,,] [,,] 25582 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:42:17.835  INFO [bootstrap,,,] [,,] 25582 --- [main] c.i.n.c.c.main.ApplicationConfig         : Started ApplicationConfig in 10.553 seconds (JVM running for 11.145)
+2018-05-31 14:52:13.249  INFO [bootstrap,,,] [,,] 26419 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:52:22.533  INFO [bootstrap,,,] [,,] 26419 --- [main] c.i.n.c.c.main.ApplicationConfig         : Started ApplicationConfig in 10.405 seconds (JVM running for 10.952)
+2018-05-31 14:58:14.427  INFO [bootstrap,,,] [,,] 26837 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 14:58:21.862  INFO [bootstrap,,,] [,,] 26837 --- [main] c.i.n.c.c.main.ApplicationConfig         : Started ApplicationConfig in 8.383 seconds (JVM running for 8.986)
+2018-05-31 15:04:19.108  INFO [bootstrap,,,] [,,] 28709 --- [main] c.i.n.c.c.main.ApplicationConfig         : No active profile set, falling back to default profiles: default
+2018-05-31 15:04:28.723  INFO [bootstrap,,,] [,,] 28709 --- [main] c.i.n.c.c.main.ApplicationConfig         : Started ApplicationConfig in 10.615 seconds (JVM running for 11.168)

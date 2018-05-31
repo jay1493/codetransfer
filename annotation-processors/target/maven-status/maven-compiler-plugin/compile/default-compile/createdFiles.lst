@@ -1,0 +1,3 @@
+com\ie\naukri\annotation\processors\NaukriAnnotationProcessor.class
+com\ie\naukri\annotation\transformers\AnnotationTransformer.class
+com\ie\naukri\annotation\transformers\JavacAnnotationTransformer.class

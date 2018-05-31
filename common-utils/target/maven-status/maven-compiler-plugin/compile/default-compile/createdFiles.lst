@@ -1,0 +1,7 @@
+com\ie\naukri\common\config\readers\ModuleAwarePropertiesUtils.class
+com\ie\naukri\common\providers\AppClientDetails.class
+com\ie\naukri\common\providers\ServiceModuleNameProvider.class
+com\ie\naukri\common\threads\ClientDetailsAwareRunnable.class
+com\ie\naukri\common\mappers\ApplicationExceptionMapper.class
+com\ie\naukri\common\constraints\validators\DefaultConstraintValidator.class
+com\ie\naukri\common\threads\ClientDetailsAwareCallable.class
